@@ -90,24 +90,24 @@ body{font-family:'Poppins',sans-serif;background:#f5f1e8;color:#3e3e3e;line-heig
   border-radius: 20px !important;
   pointer-events: none !important;
   font-weight: 700 !important;
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-  }
-  h1, h2 {
-    font-size: 22px !important;
-  }
-  .container, .content, section {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
+ }
+    
+    /* KHUSUS HP */
+    @media only screen and (max-width: 600px) {
+      body { padding: 15px; }
+      .container { padding: 25px 20px; }
+      h1 { font-size: 20px; }
+      h2 { font-size: 38px; }
+      .info { font-size: 14px; }
+      .countdown { gap: 8px; }
+      .countdown-box { min-width: 60px; padding: 10px 5px; }
+      .countdown-box .angka { font-size: 22px; }
+      .countdown-box .label { font-size: 10px; }
+      .tanggal { font-size: 16px; }
+      .lokasi { font-size: 13px; }
+      .watermark-ads-creative { font-size: 10px; padding: 5px 10px; }
+      .btn-music { width: 45px; height: 45px; font-size: 20px; bottom: 60px; }
+    }
   /* Watermark biar gak kegedean di HP */
   .watermark-ads-creative {
     font-size: 10px !important;
