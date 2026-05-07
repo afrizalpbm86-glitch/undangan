@@ -1,233 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Undangan Pernikahan Rizal & Ayu</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#f5f1e8;color:#3e3e3e;line-height:1.8;text-align:center}
-
-/* COVER - BACKGROUND FOTO */
-.cover {
-  background-image: url('foto.png');
-  background-size: contain;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-color: #0A0A0A;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}a(255,255,255,0.9);color:#333;border:none;border-radius:50px;font-weight:600;cursor:pointer;backdrop-filter:blur(10px);transition:0.3s}
-.btn:hover{background:#fff;transform:scale(1.05)}
-
-/* KERTAS UNDANGAN */
-.isi{background:url('foto.jpg') center/cover fixed;position:relative;padding:40px 20px}
-.isi::before{content:'';position:absolute;inset:0;background:rgba(248,245,240,0.95);backdrop-filter:blur(3px)}
-.kertas{max-width:700px;margin:auto;background:#fffef8;padding:60px 50px;box-shadow:0 5px 30px rgba(0,0,0,0.1);position:relative;z-index:2;border:1.5px solid #c9a961}
-
-/* ORNAMEN SUDUT EMAS */
-.corner{position:absolute;width:30px;height:30px;border-color:#c9a961;border-style:solid}
-.tl{top:20px;left:20px;border-width:1.5px 0 0 1.5px}
-.tr{top:20px;right:20px;border-width:1.5px 1.5px 0 0}
-.bl{bottom:20px;left:20px;border-width:0 0 1.5px 1.5px}
-.br{bottom:20px;right:20px;border-width:0 1.5px 1.5px 0}
-
-.arab{font-family:'Scheherazade New',serif;font-size:2rem;margin-bottom:5px;color:#8B4513}
-.salam{font-style:italic;margin-bottom:20px;font-size:0.95rem}
-.mukadimah{font-size:0.9rem;margin-bottom:30px}
-
-/* NAMA MEMPELAI - PERSIS KAYAK FOTO LU */
-.nama-wanita{font-family:'Great Vibes',cursive;font-size:3.2rem;color:#8B4513;margin:10px 0 5px;font-weight:400;line-height:1.2}
-.nama-pria{font-family:'Great Vibes',cursive;font-size:3.2rem;color:#8B4513;margin:20px 0 5px;font-weight:400;line-height:1.2}
-.ortu{font-size:0.9rem;margin:2px 0;line-height:1.4}
-.alamat{font-size:0.8rem;color:#666;line-height:1.4;margin-bottom:10px}
-.pembatas{margin:30px auto;width:150px;border-top:1px solid #c9a961;position:relative}
-.pembatas::before{content:'◆';position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#fffef8;padding:0 10px;color:#c9a961;font-size:0.8rem}
-
-/* ACARA - PERSIS KAYAK FOTO LU */
-.acara{margin:30px 0;font-size:0.9rem}
-.acara h3{font-family:'Playfair Display';font-size:1.1rem;color:#555;letter-spacing:2px;text-transform:uppercase;margin:25px 0 15px}
-.acara-box{display:flex;justify-content:center;gap:0;margin:20px 0;flex-wrap:wrap}
-.acara-col{flex:1;padding:0 20px;border-left:1px solid #c9a961;min-width:150px}
-.acara-col:first-child{border-left:none}
-.tanggal{font-size:3rem;font-weight:700;color:#8B4513;line-height:1;font-family:'Playfair Display';margin:5px 0}
-.hari{font-weight:600;text-transform:uppercase}
-.lokasi{margin-top:20px;font-weight:600}
-
-/* COUNTDOWN */
-.countdown{display:flex;justify-content:center;gap:15px;margin:30px auto;flex-wrap:wrap}
-.countdown div{background:#8B4513;color:white;padding:15px;border-radius:10px;min-width:70px}
-.countdown span{display:block;font-size:2rem;font-weight:600;font-family:'Playfair Display'}
-.countdown p{font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;margin-top:5px}
-
-/* KAMI YANG MENGUNDANG */
-.pengundang{margin-top:40px}
-.pengundang-title{font-weight:700;margin-bottom:15px;font-family:'Playfair Display';letter-spacing:1px}
-.pengundang-box{display:flex;justify-content:space-between;gap:20px;margin-top:15px;flex-wrap:wrap}
-.pengundang-box div{flex:1;min-width:250px;text-align:center}
-.pengundang-nama{font-size:0.85rem;font-weight:600;line-height:1.5}
-.nama-akhir{font-family:'Great Vibes',cursive;font-size:2.5rem;color:#8B4513;margin-top:40px}
-.hidden{display:none}
-.music-btn{position:fixed;bottom:20px;right:20px;width:50px;height:50px;border-radius:50%;background:#8B4513;color:white;border:none;cursor:pointer;z-index:999;box-shadow:0 5px 15px rgba(0,0,0,0.3);font-size:1.2rem}
-.watermark-ads-creative {
-  position: fixed !important;
-  bottom: 12px !important;
-  right: 12px !important;
-  z-index: 99999 !important;
-  opacity: 0.8 !important;
-  font-family: Arial, sans-serif !important;
-  font-size: 12px !important;
-  color: #FFD700 !important;
-  background: rgba(0,0,0,0.7) !important;
-  padding: 8px 15px !important;
-  border-radius: 20px !important;
-  pointer-events: none !important;
-  font-weight: 700 !important;
- }
-    
-    /* KHUSUS HP */
-    @media only screen and (max-width: 600px) {
-      body { padding: 15px; }
-      .container { padding: 25px 20px; }
-      h1 { font-size: 20px; }
-      h2 { font-size: 38px; }
-      .info { font-size: 14px; }
-      .countdown { gap: 8px; }
-      .countdown-box { min-width: 60px; padding: 10px 5px; }
-      .countdown-box .angka { font-size: 22px; }
-      .countdown-box .label { font-size: 10px; }
-      .tanggal { font-size: 16px; }
-      .lokasi { font-size: 13px; }
-      .watermark-ads-creative { font-size: 10px; padding: 5px 10px; }
-      .btn-music { width: 45px; height: 45px; font-size: 20px; bottom: 60px; }
-    }
-  /* Watermark biar gak kegedean di HP */
-  .watermark-ads-creative {
-    font-size: 10px !important;
-    padding: 5px 10px !important;
-    bottom: 8px !important;
-    right: 8px !important;
-  }
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>The Wedding of Afrizal & Ayu Julita</title>
   
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow: hidden; }
+    body { font-family: 'Poppins', sans-serif; background: #000; }
+
+    /* COVER - ANTI KEPOTONG */
+    #cover {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;
+      background: #000 url('./cover.webp') center/contain no-repeat;
+      /* CONTAIN = GAMBAR UTUH GAK KEPOTONG, ADA BAR HITAM ATAS BAWAH */
+      display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+      text-align: center; color: #fff; padding-bottom: 80px;
+    }
+    #cover::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(transparent 60%, rgba(0,0,0,0.8) 100%); z-index: 1;
+    }
+    #cover.hidden { opacity: 0; visibility: hidden; pointer-events: none; transition: 1s; }
+    .cover-content { position: relative; z-index: 2; }
+    #cover h1 { font-family: 'Great Vibes', cursive; font-size: 45px; color: #FFD700; margin: 10px 0; text-shadow: 2px 2px 4px #000; }
+    .btn-buka {
+      padding: 14px 35px; background: #FFD700; color: #5D4037; border: none;
+      border-radius: 30px; font-weight: 600; font-size: 16px; cursor: pointer; margin-top: 20px;
+    }
+
+    /* SLIDE - ANTI KEPOTONG + 4 FOTO JALAN */
+    .swiper { width: 100%; height: 100vh; background: #000; }
+    .swiper-slide {
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; background: #000;
+      /* GAMBAR DI DALEM SLIDE PAKE TAG IMG BIAR GAK KEPOTONG */
+    }
+    .slide-img {
+      width: 100%; height: 100%; object-fit: contain; 
+      /* CONTAIN = GAMBAR UTUH 100% GAK KEPOTONG DI HP */
+      position: absolute; top: 0; left: 0; z-index: 1;
+    }
+    .slide-content {
+      position: relative; z-index: 2; background: rgba(0,0,0,0.6); 
+      padding: 25px; border-radius: 15px; max-width: 85%; color: #fff;
+    }
+    .slide-judul { font-family: 'Great Vibes', cursive; font-size: 38px; color: #FFD700; margin-bottom: 15px; text-shadow: 2px 2px 4px #000; }
+    .nama-besar { font-family: 'Great Vibes', cursive; font-size: 32px; color: #FFD700; margin: 10px 0; }
+    .slide-teks { font-size: 14px; line-height: 1.7; }
+    
+    .countdown { display: flex; gap: 8px; margin: 20px 0; justify-content: center; flex-wrap: wrap; }
+    .countdown-box { background: #8D6E63; color: #fff; padding: 8px; border-radius: 8px; min-width: 60px; }
+    .countdown-box .angka { font-size: 20px; font-weight: 600; display: block; }
+    .countdown-box .label { font-size: 10px; }
+    
+    .swiper-pagination-bullet { background: #fff; opacity: 0.5; }
+    .swiper-pagination-bullet-active { background: #FFD700; opacity: 1; }
+    
+    .btn-music {
+      position: fixed; bottom: 80px; right: 25px; width: 45px; height: 45px; border-radius: 50%;
+      background: #8D6E63; color: #fff; border: 2px solid #fff; font-size: 20px; cursor: pointer; z-index: 999;
+    }
+    
+    .watermark-ads-center {
+      text-align: center; padding: 10px; font-size: 11px; font-weight: 600; color: #FFD700;
+      background: rgba(0, 0, 0, 0.8); position: fixed; bottom: 0; width: 100%; z-index: 998;
+    }
+  </style>
 </head>
 <body>
-<audio id="musik" loop><source src="lagu.mp3" type="audio/mpeg"></audio>
-<button class="music-btn" onclick="toggleMusik()" id="musicBtn">🔇</button>
 
-<div class="cover" id="cover">
-<div class="cover-content">
-<p>The Wedding Of</p>
-<h1>Rizal & Ayu</h1>
-<p class="tanggal-cover">Sabtu, 10 Juli 2027</p>
-<button class="btn" onclick="buka()">💌 Buka Undangan</button>
-</div>
-</div>
+  <div id="cover">
+    <div class="cover-content">
+      <p>THE WEDDING OF</p>
+      <h1>Afrizal & Ayu Julita</h1>
+      <p>11 . 07 . 2026</p>
+      <button class="btn-buka" onclick="bukaUndangan()">Buka Undangan</button>
+    </div>
+  </div>
 
-<div id="isi" class="hidden">
-<div class="isi">
-<div class="kertas">
-<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+  <div class="swiper main-swiper">
+    <div class="swiper-wrapper">
+      
+      <!-- SLIDE 1 -->
+      <div class="swiper-slide">
+        <img src="./bg1.webp" class="slide-img" alt="Foto 1">
+        <div class="slide-content">
+          <div class="slide-judul">Save The Date</div>
+          <div class="nama-besar">Afrizal & Ayu</div>
+          <div class="countdown">
+            <div class="countdown-box"><span class="angka" id="hari">00</span><span class="label">Hari</span></div>
+            <div class="countdown-box"><span class="angka" id="jam">00</span><span class="label">Jam</span></div>
+            <div class="countdown-box"><span class="angka" id="menit">00</span><span class="label">Menit</span></div>
+            <div class="countdown-box"><span class="angka" id="detik">00</span><span class="label">Detik</span></div>
+          </div>
+        </div>
+      </div>
 
-<p class="arab">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-<p class="salam">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
-<p class="mukadimah">Maha Suci Allah SWT yang telah menciptakan makhluk-Nya Berpasang-pasangan. Ya Allah, semoga ridho-Mu tercurah mengiringi pernikahan putra-putri kami:</p>
+      <!-- SLIDE 2 -->
+      <div class="swiper-slide">
+        <img src="./bg2.webp" class="slide-img" alt="Foto 2">
+        <div class="slide-content">
+          <div class="slide-judul">The Groom</div>
+          <div class="nama-besar">Afrizal</div>
+          <p class="slide-teks">Putra dari Bapak Ahmad & Ibu Siti</p>
+        </div>
+      </div>
 
-<!-- NAMA WANITA DULU - PERSIS KAYAK FOTO -->
-<h1 class="nama-wanita">Ayu Julita, S.Pd</h1>
-<p class="ortu">Putri dari Bpk. Amhar Sukamana <br>& Ibu rahmawati</p>
-<p class="alamat">(Jl. Perumahan Talang Sako No.25 Sukajadi, Prabumulih)</p>
+      <!-- SLIDE 3 -->
+      <div class="swiper-slide">
+        <img src="./bg3.webp" class="slide-img" alt="Foto 3">
+        <div class="slide-content">
+          <div class="slide-judul">The Bride</div>
+          <div class="nama-besar">Ayu Julita</div>
+          <p class="slide-teks">Putri dari Bapak Bambang & Ibu Lina</p>
+        </div>
+      </div>
 
-<div class="pembatas"></div>
+      <!-- SLIDE 4 -->
+      <div class="swiper-slide">
+        <img src="./bg4.webp" class="slide-img" alt="Foto 4">
+        <div class="slide-content">
+          <div class="slide-judul">Akad & Resepsi</div>
+          <p class="slide-teks"><strong>Sabtu, 11 Juli 2026</strong><br>Masjid Agung Palembang</p>
+        </div>
+      </div>
 
-<!-- NAMA PRIA DI BAWAH -->
-<h2 class="nama-pria">Afrizal, S.Kom</h2>
-<p class="ortu">Putra dari Bpk. Almarhum Nanung<br>& Ibu Almarhumah Ayuning</p>
-<p class="alamat">(Jl. Veteran No.25 , Prabumulih)</p>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
 
-<div class="acara">
-<p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk dapat hadir di Acara</p>
-<h3>AKAD NIKAH & RESEPSI PERNIKAHAN</h3>
-<p style="font-weight:600">YANG INSYA ALLAH AKAN DILAKSANAKAN PADA :</p>
-<div class="acara-box">
-<div class="acara-col">
-<p><b>AKAD NIKAH :</b></p>
-<p>Pukul : 08.00 WIB<br>s/d Selesai</p>
-</div>
-<div class="acara-col">
-<p class="hari">SABTU</p>
-<p class="tanggal">10</p>
-<p><b>July 2027</b></p>
-</div>
-<div class="acara-col">
-<p><b>RESEPSI :</b></p>
-<p>Pukul : 10.00 WIB<br>s/d Selesai</p>
-</div>
-</div>
-<p class="lokasi">Bertempat di : Gedung Patra Ria Pertamina</p>
-<p class="alamat">Jl Belimbing Komplek Pertamina Prabumulih. </p>
-</div>
+  <button class="btn-music" onclick="toggleMusic()">🔇</button>
+  <audio id="bgMusic" loop src="./lagu.mp3"></audio>
 
-<!-- COUNTDOWN JALAN -->
-<div class="countdown" id="countdown"></div>
+  <div class="watermark-ads-center">
+    ⚡ ADS Creative | Order WA 0812-xxxx-xxxx
+  </div>
 
-<p style="font-size:0.85rem">Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga, apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do'a restu kepada kedua mempelai.</p>
-<p style="font-size:0.85rem;margin-top:10px">Atas kehadiran dan do'a restu Bapak/Ibu/saudara/i, kami ucapkan terima kasih.</p>
-<p class="salam" style="margin-top:15px">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      window.bukaUndangan = function() {
+        document.getElementById('cover').classList.add('hidden');
+        playMusicOnce();
+      }
 
-<div class="pengundang">
-<p class="pengundang-title">Kami Yang Mengundang</p>
-<div class="pengundang-box">
-<div><p class="pengundang-nama">Kel. Besar Bpk. Amhar Sukamana<br>& Ibu rahmawati</p></div>
-<div><p class="pengundang-nama">Kel. Besar Bpk. Almarhum Nanung<br>& Ibu Almarhumah Ayuning</p></div>
-</div>
-</div>
+      const swiper = new Swiper('.main-swiper', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+      });
 
-<p class="nama-akhir">Rizal & Ayu</p>
-</div>
-</div>
-</div>
+      let musikPlay = false;
+      const audio = document.getElementById('bgMusic');
+      const btnMusic = document.querySelector('.btn-music');
+      
+      function playMusicOnce() {
+        if (!musikPlay) {
+          audio.play().then(() => {
+            musikPlay = true;
+            btnMusic.innerHTML = '🔊';
+          }).catch(e => {});
+        }
+      }
 
-<script>
-let musikPlay = false;
-function buka(){
-document.getElementById('cover').style.display='none';
-document.getElementById('isi').classList.remove('hidden');
-document.getElementById('musik').play();
-musikPlay = true;
-document.getElementById('musicBtn').innerHTML = '🔊';
-}
-function toggleMusik(){
-const musik = document.getElementById('musik');
-if(musikPlay){musik.pause();document.getElementById('musicBtn').innerHTML = '🔇';}
-else{musik.play();document.getElementById('musicBtn').innerHTML = '🔊';}
-musikPlay = !musikPlay;
-}
-const target = new Date("Jul 10, 2027 08:00:00").getTime();
-setInterval(()=>{
-const now = new Date().getTime();
-const selisih = target - now;
-const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
-const jam = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-const menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
-const detik = Math.floor((selisih % (1000 * 60)) / 1000);
-document.getElementById("countdown").innerHTML = `
-<div><span>${hari}</span><p>Hari</p></div>
-<div><span>${jam}</span><p>Jam</p></div>
-<div><span>${menit}</span><p>Menit</p></div>
-<div><span>${detik}</span><p>Detik</p></div>`;
-},1000);
-</script>
-  <!-- Watermark ADS Creative -->
-<div class="watermark-ads-creative">⚡ ADS Creative</div>
+      window.toggleMusic = function() {
+        if (audio.paused) { audio.play(); btnMusic.innerHTML = '🔊'; } 
+        else { audio.pause(); btnMusic.innerHTML = '🔇'; }
+      }
+      
+      const tanggalAcara = new Date("July 11, 2026 08:00:00").getTime();
+      setInterval(function() {
+        const selisih = tanggalAcara - new Date().getTime();
+        if(selisih < 0) return;
+        document.getElementById("hari").innerHTML = Math.floor(selisih / 86400000);
+        document.getElementById("jam").innerHTML = Math.floor((selisih % 86400000) / 3600000);
+        document.getElementById("menit").innerHTML = Math.floor((selisih % 3600000) / 60000);
+        document.getElementById("detik").innerHTML = Math.floor((selisih % 60000) / 1000);
+      }, 1000);
+
+    });
+  </script>
 </body>
 </html>
